@@ -36,9 +36,6 @@ const SignUpScreen: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      {/* Logo / App Title */}
-      <Text style={styles.logo}>FITNESS EXPO</Text>
-
       <Text style={styles.title}>Sign Up</Text>
 
       <TextInput
@@ -101,13 +98,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 20,
     backgroundColor: "#f4f6f8",
-  },
-  logo: {
-    fontSize: 36,
-    fontWeight: "bold",
-    color: "#2E86AB",
-    textAlign: "center",
-    marginBottom: 20,
   },
   title: {
     fontSize: 24,

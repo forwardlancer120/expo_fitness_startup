@@ -2,11 +2,11 @@ import { useForm } from "@/hooks/use-form";
 import { useRouter } from "expo-router";
 import React from "react";
 import {
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 const SignInScreen: React.FC = () => {
@@ -16,7 +16,7 @@ const SignInScreen: React.FC = () => {
     password: "",
   });
 
-  const onLogin = () => {
+  const onSignIn = () => {
     const { email, password } = values;
     const newErrors: any = {};
     if (!email) newErrors.email = "Email is required";
@@ -25,16 +25,13 @@ const SignInScreen: React.FC = () => {
       setErrors(newErrors);
       return;
     }
-    console.log("Login values:", values);
+    console.log("Sign In values:", values);
     router.replace("/(tabs)");
   };
 
   return (
     <View style={styles.container}>
-      {/* Logo / App Title */}
-      <Text style={styles.logo}>FITNESS EXPO</Text>
-
-      <Text style={styles.title}>Login</Text>
+      <Text style={styles.title}>Sign In</Text>
 
       <TextInput
         style={styles.input}
@@ -55,9 +52,9 @@ const SignInScreen: React.FC = () => {
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => handleSubmit(onLogin)}
+        onPress={() => handleSubmit(onSignIn)}
       >
-        <Text style={styles.buttonText}>Login</Text>
+        <Text style={styles.buttonText}>Sign In</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => router.push("/(auth)/signup")}>
